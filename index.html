@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <base href="index.html">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Академия манер Видение</title>
+    	<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Orelega+One&display=swap" rel="stylesheet">
+		<link href="src/styles/app.css" rel="stylesheet">
+		<script>
+		    function next(event, next_element_id, current_element_id) {
+    		    
+    		    event.preventDefault();
+		        event.stopPropagation();
+		        
+                var next_element = document.getElementById(next_element_id);
+                next_element.classList.add("slide_active");
+                var current_element = document.getElementById(current_element_id);
+                current_element.classList.remove("slide_active");
+                current_element.classList.add("slide_inactive");
+                return 0;
+            }
+		</script>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<header>
+			<a class="logo" href="index.html">
+				<div>Академия манер Видение</div>
+			</a>
+			<nav>
+  				<div><a href="#info">Поступающим</a></div>
+  				<div><a href="#request">День открытых дверей</a></div>
+  				<div><a href="#advantages">Почему мы?</a></div>
+  				<div><a href="#contacts">Контакты</a></div>
+			</nav>
+		</header>
+		<section class="slider">
+		    <div class="slide dark_blue slide_active" id="slide_1">
+		        <div class="container slide_1">
+		            <h3>Мы открываем новый набор в академию</h3>
+		            <p>Записывайся прямо сейчас!</p>
+		            <div class="button"><a href="#request">Записаться</a></div>
+		            <a class="next" href="#" onclick="next(event, 'slide_2', 'slide_1')"></a>
+		        </div>
+		    </div>
+		    <div class="slide pink slide_inactive" id="slide_2">
+		        <div class="container slide_2">
+		            <h3>Твой призрачный путь исправления</h3>
+		            <p>Почему именно мы?</p>
+		            <div class="button"><a href="#advantages">Узнать</a></div>
+		            <a class="next" href="#" onclick="next(event, 'slide_1', 'slide_2')"></a>
+		        </div>
+		    </div>
+		</section>
+		<section>
+			<div class="container about">
+				<h2>Об Академии</h2>
+				<p>Видение — это уникальная академия, посвященная обучению манерам непослушных призраков. Каждый год мы принимаем на перевоспитание новых учеников, стремясь привить им положительные качества<br>и улучшить их поведение.</p>
+				<p>В Видении работают опытные и профессиональные учителя. Они специалисты по обучению вновь прибывших манерам. В процессе подготовки ученики изучают правила вежливости, соблюдение этикета<br>и уважительное отношение к окружающим.</p>	
+			</div>
+		</section>
+		<section class="yellow" id="advantages">
+			<div class="container advantages">
+				<table>
+					<tr>
+						<td class="advantages__value">124</td>
+						<td class="advantages__description">преподавателя лучших в своем деле</td>
+						<td class="advantages__value">17</td>
+						<td class="advantages__description">уникальных программ</td>
+					</tr>
+					<tr>
+						<td class="advantages__value">856</td>
+						<td class="advantages__description">выпускников освоились в мире живых</td>
+						<td class="advantages__value">1</td>
+						<td class="advantages__description">по успешному перевоспитанию</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section id="request" class="">
+		    <!--<div class="container">-->
+		    <form class="container request" action="" method="POST">
+		    	<div class="col6 request__left_col">
+		    	    <h2>День открытых<br/>дверей в Видении</h2>
+		    	    <input type="text" name="name" value="" placeholder="ФИО">
+		    	    <input type="text" name="age" value="" placeholder="Возраст">
+		    	    <input type="text" name="phone" value="" placeholder="Телефон">
+		    	    <input type="text" name="email" value="" placeholder="E-mail">
+		        </div>
+		        <div class="col6 request__right_col">
+		            <p>Мы рады сообщить, о том, что 15 октября в полночь, Видение откроет свои двери для всех желающих!</p>
+		            <div class="button"><input type="submit" value="Оставить заявку"></div>
+		        </div>
+		    </form>
+		</section>
+		<section id="info" class="dark_blue">
+			<div class="container info">
+				<h2>Поступающим</h2>
+				<div class="info__content">
+					<p>Спешим сообщить о начале нового набора<br>в Академию! 25 мая в Видения пройдут экзамены по трем направлениям: манеры, речь, искусство обращения с окружающими.</p>
+					<p style="margin-top: 90px;">Начало экзаменов: 23:00<br/>Окончание экзаменов: 2:00<br/>Место проведения: ул Жуткино,<br/>Поместье им. Б.У. Призрачкина</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="contacts" class="container">
+				<a href="index.html" class="logo"></a>
+				<div class="contacts">
+					<p>Приемная комиссия:<br/><a href="tel:8808346000">8 (808) 346000</a></p>
+					<p>Адрес: г. Испуг, ул Жуткино,<br/>Поместье им. Б.У. Призрачкина</p>
+					<p>Адрес почты:<br/><a href="mailto:academy_vision@gmail.com">academy_vision@gmail.com</a></p>
+				</div>
+				<div class="social_media">
+					<div><a href="https://vk.com/hse_university" class="vk"></a></div>
+					<div><a href="https://youtube.com/@hse?si=T1lDniI_RV7oMjBH" class="youtube"></a></div>
+					<div><a href="https://t.me/s/hse_official" class="telegram"></a></div>
+				</div>
+				<div class="copyright">Все права защищены. © 1865 Академия манер Видение</div>
+			</div>
+		</footer>
+	</body>
+</html>
